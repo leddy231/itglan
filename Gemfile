@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
-ruby "2.3.1"
+ruby "2.3.3"
 gem 'sinatra'
 gem 'firebase'
 gem 'jwt'
 gem 'rack-ssl'
 gem 'certified'
-gem 'sanitize'
+gem 'sanitize', '>=4.6.3'
+gem 'rack-protection', '>=1.5.5'
