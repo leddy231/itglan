@@ -1,3 +1,7 @@
+#replyIcon {
+  transform: scaleX(-1);
+}
+
 .centerHorizontal {
   display: flex;
   flex-direction: row;
@@ -8,11 +12,11 @@
 .adminTable {
   margin-top: 20px;
   border-collapse: collapse;
-  background-color: #263238;
+  background-color: #222222;
 }
 
 .adminTable tr:hover {
-  box-shadow: inset 0px 0px 0px 5px #009cdc;
+  box-shadow: inset 0px 0px 0px 5px #4b0082;
 }
 
 .adminTable tr td, .adminTable tr th {
@@ -27,12 +31,18 @@
 
 .tileImage {
   /* Masonry bricks or child elements */
-  background-color: #eee;
   display: inline-block;
   margin: 0;
   height: 180px;
   padding: 0;
   border: 0;
+  transition: transform .1s;
+  z-index: 0;
+}
+
+.tileImage:hover {
+  transform: scale(2);
+  z-index: 1;
 }
 
 #navbar {
@@ -40,7 +50,7 @@
   flex-direction: row;
   align-items: left;
   justify-content: left;
-  background-color: #37474F;
+  background-color: #333333;
 }
 
 #navbar img {
@@ -110,7 +120,7 @@ h1, h2 {
 body {
   text-align: center;
   font-family: 'Roboto', serif;
-  background-color: #263238;
+  background-color: #222222;
 }
 
 p, a, label, li {
@@ -125,7 +135,7 @@ img {
 }
 
 .button {
-  background-color: #009cdc;
+  background-color: #4b0082;
   margin: 5px;
   border: 0;
   border-radius: 3px;
@@ -138,7 +148,7 @@ img {
 }
 
 .button:hover {
-  background-color: #33b0e3;
+  background-color: #6f339b;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -180,11 +190,11 @@ input[type=text], input[type=email], input[type=password] {
 
 .tab:hover {
   cursor: pointer;
-  background-color: #33b0e3;
+  background-color: #6f339b;
 }
 
 .tab.selected {
-  background-color: #009cdc;
+  background-color: #4b0082;
 }
 
 #main {
@@ -197,7 +207,7 @@ input[type=text], input[type=email], input[type=password] {
 }
 
 .card {
-  background-color: #37474F;
+  background-color: #333333;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;
@@ -280,11 +290,11 @@ input[type=text], input[type=email], input[type=password] {
 }
 
 .tables ul li a.booked {
-  background-color: #009cdc;
+  background-color: #4b0082;
 }
 
 .tables ul li a.selected {
-  box-shadow: inset 0px 0px 0px 5px #009cdc;
+  box-shadow: inset 0px 0px 0px 5px #4b0082;
 }
 
 .tables ul li a.taken {

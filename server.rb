@@ -3,11 +3,13 @@ require 'firebase'
 require "./verifier"
 require "certified"
 require "sanitize"
-#require 'rack/ssl'
 
-#set :ssl, false
-#use Rack::SSL
-use Rack::Logger
+if Sinatra::Application.environment == :development
+	use Rack::Logger
+else
+	require 'rack/ssl'
+	use Rack::SSL
+end
 
 base_uri = "https://itg-lan-dev.firebaseio.com/"
 id = "itg-lan-dev"
